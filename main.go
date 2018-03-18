@@ -56,9 +56,7 @@ func main() {
 		}
 		//bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, fmt.Sprintf("Hello %s. I am a bot! Write /help if you don't know who I", update.Message.From.UserName)))
 		log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
-
 		msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)
-
 		if update.Message.IsCommand() {
 			switch update.Message.Command() {
 			case "help":
